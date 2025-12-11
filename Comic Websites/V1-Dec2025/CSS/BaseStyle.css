@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(25, 25, 25);
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+
+    /* In order to avoid borders when adding background colors to tags,
+    set the margin and the padding of the body to 0 */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(15, 15, 15);
+
+}
+
+/* 
+section{
+    /* flex needs to be added to the parent container
+    display: flex;
+    flex-direction: row;
+
+} */
+
+.windowTitle {
+    margin-bottom: 0;
+}
+
+.windowDescription {
+    font-size: small;
+    color:darkgray;
+}
+
+/* CHAPTERS DROPDOWN */
+.dropdownChapters {
+    display:block !important;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.dropdownButton {
+    font-size: 15px; 
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(60,60,60);
+    color:white;
+    padding: 5px 200px;
+    font-family: inherit;
+    text-align: center;
+    /* margin: 0; */
+}
+
+.dropdownButton:hover{
+    background-color: rgb(40,40,40);
+}
+
+.dropdownContent {
+    display: none;
+    border-radius: 10px;
+    color:white;
+    padding: 5px 200px;
+    font-family: inherit;
+    /* text-align: center; */
+}
+
+.dropdownContent button {
+    font-size: 15px; 
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(60,60,60);
+    color:white;
+    padding: 5px 170px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.dropdownContent button:hover {
+  background-color: rgb(40,40,40);
+}
+
+.dropdownContent button:active {
+    background-color: rgb(20,20,20);
+    color:darkgray;
+}
+
+.dropdownChapters:hover .dropdownContent {
+  display: block;
+}
+
+.chapterButton{
+    margin: 1px;
+}
+
+.goToStartLink {
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+.goToStartLink:hover {
+    background-color: rgb(60,60,60);
+}
+
+
+/* div {
+    /* inline - cant set width. will auto-set on the element's size */
+    /* inline-block - can set width. 
+    display: block;
+} */
+
+/* NAVIGATION MENU */
+ul {
+     display: inline-block;
+    margin:0;
+    padding:10px;
+    list-style-type: none;
+
+}
+
+li {
+    display: inline-block;
+    margin: 0 30px 0 0;
+}
+
+a.menu{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align:center;
+}
+
+a.menu:hover{
+    background-color: rgb(25, 25, 25);
+    font-weight: bold;
+    padding: 15px;
+    text-align:center;
+}
+
+/* select {
+    padding:5px;
+}
+
+.chapterMenu{
+    display:block !important;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+
+}
+
+.chapterMenu::after {
+    content: none;
+}
+
+.chapterSelect{
+    text-align: center;
+    background-color: rgb(200,200,200);
+    border: 0;
+    border-radius: 20px;
+    border-width: 100px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+   
+} */ 

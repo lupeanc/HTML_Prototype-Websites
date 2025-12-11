@@ -1,0 +1,93 @@
+<!-- PRO TIP: ! + Tab : generates a basic template for a html page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MUST ADD!!!!! -> makes sure the site looks good on both mobile and pc webs-->
+        <!-- first one sets the device width according to the user's device -->
+        <!-- second one sets the zoom to be 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrototypeComics</title>
+
+    <link rel="icon" type="image/x-icon" href="../Media/PageIcon.png">
+    <link rel="stylesheet" href="../CSS/BaseStyle.css">
+    <link rel="stylesheet" href="../CSS/CharactersStyle.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="menu" href="MainPage.html">Home</a></li>
+                <li><a class="menu" href="Characters.html">Characters</a></li>
+                <li><a class="menu" href="About.html">About The Artist</a></li>
+            </ul>
+        </nav>
+
+        <h1 style="margin-bottom: 0;">Characters</h1>
+    </header>
+
+    <section>
+        <div class="characterShowcase">
+
+            <div name="mainCharacters">
+                <p> MAIN CHARACTERS</p>
+                <hr>
+                <button class="characterShowcaseButton" type="button" value="Char1" onclick="showcaseCharacter('#' +this.value + 'Details')">CHAR 1</button>
+                <div id="Char1Details" class="description">
+                    <p>Name: ...</p>
+                    <p>Age: ...</p>
+                    <p>Role: ...</p>
+                    <img src="../Media/Characters/Char1.png" style="width:100%;height:auto">
+                </div>
+                
+                <button class="characterShowcaseButton" type="button" value="Char2" onclick="showcaseCharacter('#' +this.value + 'Details')">CHAR 2</button>
+                <div id="Char2Details" class="description">
+                    <p>Name: ...</p>
+                    <p>Age: ...</p>
+                    <p>Role: ...</p>
+                    <img src="../Media/Characters/Char2.png" style="width:100%;height:auto">
+                </div>
+
+            </div>
+
+            <div name="secondaryCharacters">
+                <p> SECONDARY CHARACTERS</p>
+                <hr>
+                <button class="characterShowcaseButton" type="button" value="Char3" onclick="showcaseCharacter('#' +this.value + 'Details')">CHAR 1</button>
+                <div id="Char3Details" class="description">
+                    <p>Name: ...</p>
+                    <p>Age: ...</p>
+                    <p>Role: ...</p>
+                    <img src="../Media/Characters/Char1.png" style="width:100%;height:auto">
+                </div>
+            </div>
+
+            <div name="episodicCharacters">
+                <p> EPISODIC CHARACTERS</p>
+                <hr>
+            </div>
+              
+              
+        </div>
+    </section>
+
+    <script>
+        let isClicked=true;
+
+        function showcaseCharacter(idValue){
+            var divContainer = document.querySelector(idValue);
+            if(isClicked){
+                divContainer.style.display = 'block';
+                isClicked = false;
+            }
+            else{
+                divContainer.style.display = 'none';
+                isClicked = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
