@@ -1,0 +1,16 @@
+.socialMedia {
+    display: flex;
+    text-align: center;
+}
+
+.socialMedia a {
+    color:white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin: .3em;
+}
+
+.socialMedia a:hover{
+    opacity: .8
+}

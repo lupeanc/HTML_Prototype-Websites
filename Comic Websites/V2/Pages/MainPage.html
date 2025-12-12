@@ -1,0 +1,71 @@
+<!-- PRO TIP: ! + Tab : generates a basic template for a html page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MUST ADD!!!!! -> makes sure the site looks good on both mobile and pc webs-->
+        <!-- first one sets the device width according to the user's device -->
+        <!-- second one sets the zoom to be 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrototypeComics</title>
+
+    <link rel="icon" type="image/x-icon" href="../Media/PageIcon.png">
+    <link rel="stylesheet" href="../CSS/BaseStyle.css">
+</head>
+
+<body>
+    <header id="start">
+        <nav>
+            <ul>
+                <li><a class="menu" href="MainPage.html">Home</a></li>
+                <li><a class="menu" href="Characters.html">Characters</a></li>
+                <li><a class="menu" href="About.html">About The Artist</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="windowTitle">Comic Name</h1>
+        <p class="windowDescription">SHORT SUMMARY: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum justo a nulla iaculis, eu consectetur ante venenatis.
+            Nullam finibus nibh quis sollicitudin pretium. Aliquam ac lectus tempor, commodo ex a, suscipit dolor.</p>
+    </header>
+
+    <section>
+        <div class="dropdownChapters">
+            <button  class="dropdownButton" type="button" value="0" onclick="switchImage(this.value);">
+                Chapter &#x25BE
+            </button>
+
+            <div class="dropdownContent">
+                <button class="chapterButton" type="button" value="1" onclick="switchImage(this.value);">Chapter 1</button>
+                <button class="chapterButton" type="button" value="2" onclick="switchImage(this.value);">Chapter 2</button>
+            </div>
+        </div>
+    </section>
+
+    <section style="text-align: center;">
+        <h3 id="currentChapterPage" style="text-align: center; font-size: 16px;">Cover</h3>
+        <img id="imageToChange" src="../Media/PageIcon.png" style="width: 100%; height:auto;">
+        <br><br><hr><br>
+        <a class="goToStartLink" href="#start">Go back up</a>
+
+    </section>
+
+    <script>
+
+        function switchImage(buttonValue){
+            if(buttonValue==0){
+                document.getElementById('currentChapterPage').innerHTML='Cover'
+                document.getElementById('imageToChange').src='../Media/PageIcon.png';
+            }
+            else
+            {
+                document.getElementById('currentChapterPage').innerHTML='Chapter '+ buttonValue;
+                document.getElementById('imageToChange').src='../Media/img'+ buttonValue +".png";
+            }
+        }
+
+        
+    </script>
+
+</body>
+</html>
